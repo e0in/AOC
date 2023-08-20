@@ -1,0 +1,43 @@
+1  12  1
+1  13  9
+1  12  11
+	26 -13 6
+1  11  6
+1  15  13
+	26 -14 13
+1  12  5
+	26 -8  7
+1  14  2
+	26 -9  10
+	26 -11 14
+	26 -6  7
+	26 -5  1
+
+DIV CHECK OFFSET
+
+PUSH input[0] + 1
+												PUSH input[1] + 9
+												PUSH input[2] + 11
+												POP. Must have input[3] == popped_value - 13
+												PUSH input[4] + 6
+												PUSH input[5] + 13
+												POP. Must have input[6] == popped_value - 14
+												PUSH input[7] + 5
+												POP. Must have input[8] == popped_value - 8
+												PUSH input[9] + 2
+												POP. Must have input[10] == popped_value - 9
+												POP. Must have input[11] == popped_value - 11
+												POP. Must have input[12] == popped_value - 6
+POP. Must have input[13] == popped_value - 5
+
+I3 = I2 + 11 - 13 = I2 - 2
+I6 = I5 - 1
+I8 = I7 - 3
+I10 = I9 - 7
+I11 = I4 - 5
+I12 = I1 + 3
+I13 = I0 - 4
+
+00000000000000
+96979989692495
+51316214181141
